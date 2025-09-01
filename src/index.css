@@ -2,74 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* TFA Design System - Football Association Theme */
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
-    /* Primary football blue theme */
     --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
-    
-    /* Football association blue - main brand color */
-    --primary: 218 100% 35%;
-    --primary-foreground: 0 0% 100%;
-    --primary-dark: 218 100% 25%;
-    
-    /* Secondary colors */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47.4% 11.2%;
-    
-    /* Success green for wins/positive states */
-    --success: 142 76% 36%;
-    --success-foreground: 0 0% 100%;
-    
-    /* Warning orange for draws/caution */
-    --warning: 25 95% 53%;
-    --warning-foreground: 0 0% 100%;
-    
-    /* Destructive red for losses/negative states */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-    
-    /* Muted colors */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    
-    /* UI Elements */
+    --foreground: 222.2 84% 4.9%;
+
     --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 218 100% 35%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
     --radius: 0.5rem;
-    
-    /* Special football theme colors */
-    --field-green: 120 60% 35%;
-    --grass-light: 120 40% 45%;
-    --goal-net: 0 0% 95%;
-    
-    /* Navigation */
-    --nav-bg: 218 100% 35%;
-    --nav-text: 0 0% 100%;
-    --nav-hover: 218 100% 45%;
-    
-    /* Hero section */
-    --hero-overlay: 218 100% 15% / 0.8;
-    --hero-text: 0 0% 100%;
-    
-    /* Match center colors */
-    --match-past: 218 100% 35%;
-    --match-today: 142 76% 36%;
-    --match-upcoming: 25 95% 53%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(218 100% 35%), hsl(218 100% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(218 100% 15% / 0.9), hsl(218 100% 25% / 0.7));
-    
-    /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(218 100% 15% / 0.1);
-    --shadow-medium: 0 10px 25px -3px hsl(218 100% 15% / 0.1);
-    --shadow-large: 0 25px 50px -12px hsl(218 100% 15% / 0.25);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
