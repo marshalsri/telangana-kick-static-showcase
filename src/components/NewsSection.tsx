@@ -1,8 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-const NewsSection = () => {
-  const newsItems = [
+interface NewsItem {
+  category: string;
+  title: string;
+  image: string;
+  link: string;
+}
+
+interface SocialMedia {
+  platform: string;
+  handle: string;
+  followers: string;
+  icon: string;
+}
+
+interface NewsSectionProps {
+  newsItems?: NewsItem[];
+  socialMedia?: SocialMedia[];
+}
+
+const NewsSection = ({ newsItems, socialMedia }: NewsSectionProps) => {
+  const defaultNewsItems = [
     {
       category: "State Men's Team U23",
       title: "Coach Narasimha announces Telangana squad for state championship qualifiers",
@@ -41,7 +60,7 @@ const NewsSection = () => {
     }
   ];
 
-  const socialMedia = [
+  const defaultSocialMedia = [
     {
       platform: "Facebook",
       handle: "TelanganaFootball",
@@ -68,6 +87,9 @@ const NewsSection = () => {
     }
   ];
 
+  const displayNewsItems = newsItems || defaultNewsItems;
+  const displaySocialMedia = socialMedia || defaultSocialMedia;
+
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
@@ -82,7 +104,7 @@ const NewsSection = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {newsItems.map((item, index) => (
+              {displayNewsItems.map((item, index) => (
                 <Card key={index} className="overflow-hidden shadow-soft hover:shadow-medium transition-shadow">
                   <div className="aspect-video bg-muted overflow-hidden">
                     <img 
@@ -111,7 +133,7 @@ const NewsSection = () => {
           <div className="lg:col-span-1">
             <h3 className="text-xl font-bold text-foreground mb-6">TFA on Social Media</h3>
             <div className="space-y-4">
-              {socialMedia.map((social, index) => (
+              {displaySocialMedia.map((social, index) => (
                 <Card key={index} className="p-4 shadow-soft hover:shadow-medium transition-shadow">
                   <div className="flex items-center space-x-3">
                     <div className="text-2xl">{social.icon}</div>
